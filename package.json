@@ -4,7 +4,15 @@
   "description": "Filters out sensitive words",
   "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "watch 'npm run build' src",
+    "build": "babel src -d build",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
   },
   "repository": {
     "type": "git",
@@ -21,5 +29,11 @@
   "bugs": {
     "url": "https://github.com/abdkayali/sensitive-words/issues"
   },
-  "homepage": "https://github.com/abdkayali/sensitive-words#readme"
+  "homepage": "https://github.com/abdkayali/sensitive-words#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-latest": "^6.24.0",
+    "jest": "^19.0.2",
+    "watch": "^1.0.2"
+  }
 }
