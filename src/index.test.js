@@ -1,4 +1,4 @@
-import sensitiveWords from '.'
+import {sensitiveWords} from '.'
 
 let expected = 'The constant in software is ***';
 let originalText = 'The constant in software is change';
